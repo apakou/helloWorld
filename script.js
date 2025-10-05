@@ -166,8 +166,8 @@ const languages = [
     },
     {
         name: 'Go',
-        description: 'Langage de programmation système',
-        link: 'https://golang.org/'
+        description: 'Langage de programmation système moderne avec concurrence intégrée',
+        link: 'https://go.dev/'
     },
     {
         name: 'Haskell',

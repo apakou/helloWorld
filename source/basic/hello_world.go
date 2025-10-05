@@ -1,10 +1,11 @@
 package main
 
 import "fmt"
-/**
- * main - a yet simple hello world in Golang
- * @author: https://github.com/geoffrey - Geoffrey Logovi
- */
+
+// main demonstrates a clean Hello World program in Go
+// following Go best practices and conventions
+// Author: https://github.com/geoffrey - Geoffrey Logovi
+// Enhanced by Go community contributors
 func main() {
-    fmt.Println("Hello world!!!!")
+	fmt.Println("Hello, World!")
 }
