@@ -10,6 +10,8 @@
 
 A modern web interface showcasing "Hello World" examples in various programming languages. This project provides an interactive way to explore different programming languages and their basic syntax.
 
+First time contributing? Start with the [contribution guide](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
+
 # List of available languages:
 
 ## List of available languages:
@@ -322,135 +324,7 @@ The website features:
 
 ## Contributing
 
-Follow these steps to contribute a new Hello World example:
-
-### Step 1: Setup (One-time)
-1. Fork the repository on GitHub
-   - Go to https://github.com/agnilondapakou/helloWorld
-   - Click the "Fork" button in the top right
-   - Wait for the fork to complete
-
-2. Clone your fork locally
-   ```bash
-   git clone https://github.com/YOUR-USERNAME/helloWorld.git
-   cd helloWorld
-   ```
-
-3. Add the upstream repository
-   ```bash
-   git remote add upstream https://github.com/agnilondapakou/helloWorld.git
-   ```
-
-### Step 2: Create a New Branch
-1. Update your main branch
-   ```bash
-   git checkout main
-   git pull upstream main
-   ```
-
-2. Create a new branch for your language
-   ```bash
-   git checkout -b add-LANGUAGE-example
-   # Example: git checkout -b add-python-example
-   ```
-
-### Step 3: Add Your Hello World Program
-1. Create a new file in `source/basic/` following the naming convention:
-   - Lowercase: `helloworld.{extension}`
-   - Or PascalCase: `HelloWorld.{extension}`
-   
-   Example:
-   ```bash
-   # For Python
-   touch source/basic/helloworld.py
-   ```
-
-2. Write your Hello World program:
-   ```python
-   # Example for Python
-   # Simple Hello World program in Python
-   print("Hello World")
-   ```
-
-### Step 4: Update Documentation
-1. Open `docs/script.js`
-
-2. Add your language information in the `languages` array:
-   ```javascript
-   {
-       name: 'Python',  // Language name
-       description: 'High-level programming language for general-purpose programming',
-       link: 'https://www.python.org/'  // Official documentation
-   }
-   ```
-
-### Step 5: Test Your Changes
-1. Test your Hello World program:
-   - Run the program
-   - Verify it prints "Hello World"
-   - Check for any errors
-
-2. Test the documentation site:
-   - Open `docs/index.html` in a browser
-   - Verify your language appears
-   - Test the search and filtering
-
-### Step 6: Commit Your Changes
-1. Add your changes:
-   ```bash
-   git add source/basic/helloworld.py
-   git add docs/script.js
-   ```
-
-2. Commit with a descriptive message:
-   ```bash
-   git commit -m "Add Hello World example in Python"
-   ```
-
-3. Push to your fork:
-   ```bash
-   git push origin add-python-example
-   ```
-
-### Step 7: Create Pull Request
-1. Go to your fork on GitHub
-
-2. Click "Pull Request"
-
-3. Fill in the PR details:
-   - Title: "Add Hello World in [Language]"
-   - Description:
-     - Brief explanation of the language
-     - Any special considerations
-     - Reference to official documentation
-
-4. Submit the pull request
-
-### Guidelines
-
-#### Hello World Implementation
-- Keep it simple (just print "Hello World")
-- Use standard language features
-- Avoid external dependencies
-- Include basic comments
-- Follow language conventions
-
-#### File Structure
-```
-source/basic/
-├── helloworld.py     # Python example
-├── HelloWorld.java   # Java example
-├── helloworld.cpp    # C++ example
-└── helloworld.js     # JavaScript example
-```
-
-#### Code Style
-- Use consistent indentation
-- Add appropriate comments
-- Follow language-specific best practices
-- Test thoroughly before submitting
-
-Need help? Feel free to open an issue or ask questions in the discussions!
+New contributors are welcome. Start with the [contribution guide](CONTRIBUTING.md) for the project layout, local checks, and pull request steps. Please also review the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Development
 

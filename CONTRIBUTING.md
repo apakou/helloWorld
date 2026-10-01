@@ -1,80 +1,70 @@
 # Contributing to Hello World
 
-Thank you for your interest in contributing to **Hello World**! This project aims to help programming beginners by providing simple programs that print the "Hello World" message in various programming languages. Whether you're an experienced developer or just getting started, we'd love to have your contributions.
+Thanks for helping make programming more approachable. Contributions from first-time and experienced contributors are welcome. Please read the [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
 
-## How to Contribute
+## Project Layout
 
-### 1. Fork the Repository
-First, fork the repository to create your own copy. You can do this by clicking the "Fork" button on the project’s GitHub page.
+- `index.html`, `styles.css`, and `script.js` make up the static website.
+- `source/basic/` contains the standalone Hello World examples.
+- `README.md` is the alphabetized language directory shown on GitHub.
+- `script.js` contains the language entries rendered by the interactive website.
 
-### 2. Create a New Branch
-Before making changes, create a new branch in your fork. This helps keep your contributions organized and makes it easier for us to review your pull request.
-
-```bash
-git checkout -b add-<language-name>
-```
-
-For example:
-```bash
-git checkout -b add-python-hello-world
-```
-
-### 3. Add Your "Hello World" Program
-Create a new file in the appropriate directory, or if a directory for the language doesn't exist, feel free to create one.
-
-- The file should be named in a way that reflects the programming language you’re contributing to. For example, a Python file should be named `hello_world.py`, and a Java file should be named `HelloWorld.java`.
-- The program should only print or display the message "Hello World" in the respective language.
-
-Example:
-```python
-# Python
-print("Hello World")
-```
-
-```java
-// Java
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-    }
-}
-```
-
-### 4. Update the Documentation
-If you’re adding a new language, don’t forget to add your language to the project’s README file under the list of available languages. Provide the name of the language and a link to your file.
-
-### 5. Commit and Push Your Changes
-Once your changes are ready, commit them with a meaningful message.
+There is no build step or dependency installation. You can open `index.html` directly in a browser. To serve it locally instead, run:
 
 ```bash
-git add <file-name>
-git commit -m "Add Hello World in <language>"
+python3 -m http.server 8000
 ```
 
-Push your changes to your forked repository:
+Then visit `http://localhost:8000`.
+
+## Add a Language Example
+
+1. Check `README.md` and the `languages` array in `script.js` to make sure the language is not already listed. If it is, consider improving the existing example or documentation instead.
+2. Add a simple, runnable example under `source/basic/`. Follow the naming and capitalization of nearby files; most use `hello_world.<extension>`.
+3. Add the language alphabetically to the appropriate section in `README.md`, linking to the sample file and to a reliable language reference.
+4. Add an entry to the `languages` array in `script.js` with a readable language name, a short description, and a documentation URL. Follow the existing object format.
+5. Keep examples focused on displaying `Hello World`. Avoid extra dependencies and unrelated changes.
+
+Other useful contributions include correcting an existing example, improving a language reference, fixing an accessibility or responsive-layout issue, and clarifying project documentation. For larger changes, open an issue first so maintainers can help scope it.
+
+## Local Checks
+
+For changes to `script.js`, run the syntax check if Node.js is installed:
 
 ```bash
-git push origin <branch-name>
+node --check script.js
 ```
 
-### 6. Create a Pull Request
-Once you've pushed your changes, create a pull request (PR) to the main repository. In your PR description, please include:
-- The name of the language you're contributing to.
-- Any relevant notes or details.
+For website changes, open or serve `index.html` and check the affected behavior at desktop and mobile widths. Run a language example with its interpreter or compiler when available; it is fine to note when a runtime is not installed.
 
-Our team will review your PR and provide feedback if needed. We aim to respond to contributions as quickly as possible.
+## Submit a Pull Request
 
-## Contribution Tips
-- Ensure your code is clean and adheres to the standard syntax of the language.
-- The program should only output "Hello World" (without extra formatting unless it's essential in the language).
-- Contributions are welcome from everyone, regardless of experience level. Feel free to ask questions if you need help with Git or the project.
+1. Fork the repository on GitHub, then clone your fork:
 
----
+    ```bash
+    git clone https://github.com/<your-username>/helloWorld.git
+    cd helloWorld
+    git remote add upstream https://github.com/agnilondapakou/helloWorld.git
+    ```
 
-## Code of Conduct
+2. Create a focused branch:
 
-By contributing to this project, you agree to uphold our [Code of Conduct](https://github.com/agnilondapakou/helloWorld/blob/main/CODE_OF_CONDUCT.md). Please be respectful to others and help create a welcoming environment for all contributors.
+    ```bash
+    git switch -c add-python-hello-world
+    ```
 
----
+3. Make and check your changes, then commit and push the branch:
 
-We’re excited to see your contributions! Happy coding!
+    ```bash
+    git add source/basic/hello_world.py README.md script.js
+    git commit -m "Add Python Hello World example"
+    git push -u origin add-python-hello-world
+    ```
+
+4. Open a pull request against `main`. Describe what changed and how you checked it. The pull request template includes a short checklist.
+
+For follow-up work, sync your fork with the latest `main` before creating another branch. Please submit one focused contribution per pull request and avoid generated files or unrelated formatting changes.
+
+## Hacktoberfest 2026
+
+Hacktoberfest contributors are welcome. Please make useful, reviewable changes and follow the event's current official participation rules. This guide does not guarantee that a particular pull request qualifies for event participation.
