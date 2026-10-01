@@ -6,8 +6,9 @@ Thanks for helping make programming more approachable. Contributions from first-
 
 - `index.html`, `styles.css`, and `script.js` make up the static website.
 - `source/basic/` contains the standalone Hello World examples.
-- `README.md` is the alphabetized language directory shown on GitHub.
+- `README.md` is the project overview and getting-started page.
 - `script.js` contains the language entries rendered by the interactive website.
+- `CONTRIBUTORS.md` is the restarted recognition list for merged contributions.
 
 There is no build step or dependency installation. You can open `index.html` directly in a browser. To serve it locally instead, run:
 
@@ -19,11 +20,11 @@ Then visit `http://localhost:8000`.
 
 ## Add a Language Example
 
-1. Check `README.md` and the `languages` array in `script.js` to make sure the language is not already listed. If it is, consider improving the existing example or documentation instead.
-2. Add a simple, runnable example under `source/basic/`. Follow the naming and capitalization of nearby files; most use `hello_world.<extension>`.
-3. Add the language alphabetically to the appropriate section in `README.md`, linking to the sample file and to a reliable language reference.
-4. Add an entry to the `languages` array in `script.js` with a readable language name, a short description, and a documentation URL. Follow the existing object format.
-5. Keep examples focused on displaying `Hello World`. Avoid extra dependencies and unrelated changes.
+1. Check the `languages` array in `script.js` and existing proposals to make sure the language is not already listed. If it is, consider improving the existing example or documentation instead.
+2. Add a simple, runnable example under `source/basic/`. Follow the naming and capitalization convention `hello_world.<extension>`.
+3. Add an entry to the `languages` array in `script.js` with a readable language name, a short description, and a documentation URL. Follow the existing object format.
+4. Keep examples focused on displaying `Hello World`. Avoid extra dependencies and unrelated changes.
+5. Add your GitHub username and a short description of your contribution to `CONTRIBUTORS.md` in the pull request.
 
 Other useful contributions include correcting an existing example, improving a language reference, fixing an accessibility or responsive-layout issue, and clarifying project documentation. For larger changes, open an issue first so maintainers can help scope it.
 
@@ -44,7 +45,7 @@ For website changes, open or serve `index.html` and check the affected behavior 
     ```bash
     git clone https://github.com/<your-username>/helloWorld.git
     cd helloWorld
-    git remote add upstream https://github.com/agnilondapakou/helloWorld.git
+    git remote add upstream https://github.com/apakou/helloWorld.git
     ```
 
 2. Create a focused branch:
@@ -67,4 +68,4 @@ For follow-up work, sync your fork with the latest `main` before creating anothe
 
 ## Hacktoberfest 2026
 
-Hacktoberfest contributors are welcome. Please make useful, reviewable changes and follow the event's current official participation rules. This guide does not guarantee that a particular pull request qualifies for event participation.
+Hacktoberfest participants are welcome to contribute here. The 2026 event no longer counts repository pull requests toward rewards; participation is through official local Fests and online activities. See the [official FAQ](https://hacktoberfest.com/questions/) for current rules. A contribution to this project is valuable, but does not itself qualify for Hacktoberfest rewards.
