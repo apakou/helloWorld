@@ -1,8 +1,0 @@
-let main() -> i32
-    {
-        // Print hello world to the terminal
-        print("Hello, world!\n");
-
-        // Return an exit code of zero- no error
-        0
-    }

@@ -1,2 +1,0 @@
-RETURN 'Hello, World!'
-

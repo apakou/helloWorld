@@ -1,2 +1,0 @@
-
-System.print("Hello, world!")

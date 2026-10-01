@@ -1,5 +1,0 @@
-// HelloWorld.blaz
-
-func main() {
-    print("Hello World")
-}

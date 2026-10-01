@@ -1,3 +1,0 @@
-REBOL []
-alert
-"Hello World"

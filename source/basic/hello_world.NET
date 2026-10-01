@@ -1,7 +1,0 @@
-module HelloWorld;
-
-import System;
-
-begin
-  Console.WriteLine("Hello, World!");
-end HelloWorld.
